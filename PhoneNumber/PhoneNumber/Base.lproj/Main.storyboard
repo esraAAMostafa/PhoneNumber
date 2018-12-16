@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhoneNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAy-cD-MbO">
+                                <rect key="frame" x="94" y="157" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-xf-Q6Y">
+                                <rect key="frame" x="94" y="328.5" width="187.5" height="30"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.67450980390000004" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPhoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqs-Mp-a8L"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZNT-D8-ZFU">
+                                <rect key="frame" x="94" y="500.5" width="187.5" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZNT-D8-ZFU" firstAttribute="height" secondItem="cAy-cD-MbO" secondAttribute="height" id="2fH-bN-FJ3"/>
+                            <constraint firstItem="cAy-cD-MbO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="CQ0-ih-eSw"/>
+                            <constraint firstItem="ZNT-D8-ZFU" firstAttribute="width" secondItem="DkZ-xf-Q6Y" secondAttribute="width" id="FHQ-jJ-phd"/>
+                            <constraint firstItem="ZNT-D8-ZFU" firstAttribute="centerX" secondItem="DkZ-xf-Q6Y" secondAttribute="centerX" id="HmH-Gj-SNN"/>
+                            <constraint firstItem="DkZ-xf-Q6Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JDd-u4-ZZZ"/>
+                            <constraint firstItem="cAy-cD-MbO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OWs-Rj-MSO"/>
+                            <constraint firstItem="DkZ-xf-Q6Y" firstAttribute="centerX" secondItem="cAy-cD-MbO" secondAttribute="centerX" id="UM3-ZS-kzL"/>
+                            <constraint firstItem="cAy-cD-MbO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="imm-26-nml"/>
+                            <constraint firstItem="DkZ-xf-Q6Y" firstAttribute="width" secondItem="cAy-cD-MbO" secondAttribute="width" id="rbX-qS-f6r"/>
+                            <constraint firstItem="ZNT-D8-ZFU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="x9c-Bd-rh0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="DkZ-xf-Q6Y" id="2LX-nY-ize"/>
+                        <outlet property="phoneNumber" destination="cAy-cD-MbO" id="3C3-F8-JRA"/>
+                        <outlet property="setPhoneNumber" destination="ZNT-D8-ZFU" id="qHn-2L-46x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
